@@ -1,196 +1,195 @@
-@prefix countries: <http://eulersharp.sourceforge.net/2003/03swap/countries#> .
 @prefix sp: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-countries:country1 a sp:Country ;
+sp:country1 a sp:Country ;
     sp:region "Argentina"^^xsd:string .
 
-countries:country10 a sp:Country ;
+sp:country10 a sp:Country ;
     sp:region "Canada"^^xsd:string .
 
-countries:country11 a sp:Country ;
+sp:country11 a sp:Country ;
     sp:region "Chile"^^xsd:string .
 
-countries:country12 a sp:Country ;
+sp:country12 a sp:Country ;
     sp:region "Costa Rica"^^xsd:string .
 
-countries:country13 a sp:Country ;
+sp:country13 a sp:Country ;
     sp:region "Czech Republic"^^xsd:string .
 
-countries:country14 a sp:Country ;
+sp:country14 a sp:Country ;
     sp:region "Finland"^^xsd:string .
 
-countries:country15 a sp:Country ;
+sp:country15 a sp:Country ;
     sp:region "Dominican Republic"^^xsd:string .
 
-countries:country16 a sp:Country ;
+sp:country16 a sp:Country ;
     sp:region "Ecuador"^^xsd:string .
 
-countries:country17 a sp:Country ;
+sp:country17 a sp:Country ;
     sp:region "El Salvador"^^xsd:string .
 
-countries:country18 a sp:Country ;
+sp:country18 a sp:Country ;
     sp:region "Estonia"^^xsd:string .
 
-countries:country19 a sp:Country ;
+sp:country19 a sp:Country ;
     sp:region "France"^^xsd:string .
 
-countries:country2 a sp:Country ;
+sp:country2 a sp:Country ;
     sp:region "Australia"^^xsd:string .
 
-countries:country20 a sp:Country ;
+sp:country20 a sp:Country ;
     sp:region "Germany"^^xsd:string .
 
-countries:country21 a sp:Country ;
+sp:country21 a sp:Country ;
     sp:region "Global"^^xsd:string .
 
-countries:country22 a sp:Country ;
+sp:country22 a sp:Country ;
     sp:region "Greece"^^xsd:string .
 
-countries:country23 a sp:Country ;
+sp:country23 a sp:Country ;
     sp:region "Guatemala"^^xsd:string .
 
-countries:country24 a sp:Country ;
+sp:country24 a sp:Country ;
     sp:region "Honduras"^^xsd:string .
 
-countries:country25 a sp:Country ;
+sp:country25 a sp:Country ;
     sp:region "Hong Kong"^^xsd:string .
 
-countries:country26 a sp:Country ;
+sp:country26 a sp:Country ;
     sp:region "Hungary"^^xsd:string .
 
-countries:country27 a sp:Country ;
+sp:country27 a sp:Country ;
     sp:region "Iceland"^^xsd:string .
 
-countries:country28 a sp:Country ;
+sp:country28 a sp:Country ;
     sp:region "Indonesia"^^xsd:string .
 
-countries:country29 a sp:Country ;
+sp:country29 a sp:Country ;
     sp:region "Ireland"^^xsd:string .
 
-countries:country3 a sp:Country ;
+sp:country3 a sp:Country ;
     sp:region "Brazil"^^xsd:string .
 
-countries:country30 a sp:Country ;
+sp:country30 a sp:Country ;
     sp:region "Italy"^^xsd:string .
 
-countries:country31 a sp:Country ;
+sp:country31 a sp:Country ;
     sp:region "Japan"^^xsd:string .
 
-countries:country32 a sp:Country ;
+sp:country32 a sp:Country ;
     sp:region "Latvia"^^xsd:string .
 
-countries:country33 a sp:Country ;
+sp:country33 a sp:Country ;
     sp:region "Lithuania"^^xsd:string .
 
-countries:country34 a sp:Country ;
+sp:country34 a sp:Country ;
     sp:region "Malaysia"^^xsd:string .
 
-countries:country35 a sp:Country ;
+sp:country35 a sp:Country ;
     sp:region "Luxembourg"^^xsd:string .
 
-countries:country36 a sp:Country ;
+sp:country36 a sp:Country ;
     sp:region "Mexico"^^xsd:string .
 
-countries:country37 a sp:Country ;
+sp:country37 a sp:Country ;
     sp:region "Netherlands"^^xsd:string .
 
-countries:country38 a sp:Country ;
+sp:country38 a sp:Country ;
     sp:region "New Zealand"^^xsd:string .
 
-countries:country39 a sp:Country ;
+sp:country39 a sp:Country ;
     sp:region "Nicaragua"^^xsd:string .
 
-countries:country4 a sp:Country ;
+sp:country4 a sp:Country ;
     sp:region "Austria"^^xsd:string .
 
-countries:country40 a sp:Country ;
+sp:country40 a sp:Country ;
     sp:region "Norway"^^xsd:string .
 
-countries:country41 a sp:Country ;
+sp:country41 a sp:Country ;
     sp:region "Panama"^^xsd:string .
 
-countries:country42 a sp:Country ;
+sp:country42 a sp:Country ;
     sp:region "Paraguay"^^xsd:string .
 
-countries:country43 a sp:Country ;
+sp:country43 a sp:Country ;
     sp:region "Peru"^^xsd:string .
 
-countries:country44 a sp:Country ;
+sp:country44 a sp:Country ;
     sp:region "Philippines"^^xsd:string .
 
-countries:country45 a sp:Country ;
+sp:country45 a sp:Country ;
     sp:region "Poland"^^xsd:string .
 
-countries:country46 a sp:Country ;
+sp:country46 a sp:Country ;
     sp:region "Portugal"^^xsd:string .
 
-countries:country47 a sp:Country ;
+sp:country47 a sp:Country ;
     sp:region "Singapore"^^xsd:string .
 
-countries:country48 a sp:Country ;
+sp:country48 a sp:Country ;
     sp:region "Spain"^^xsd:string .
 
-countries:country49 a sp:Country ;
+sp:country49 a sp:Country ;
     sp:region "Slovakia"^^xsd:string .
 
-countries:country5 a sp:Country ;
+sp:country5 a sp:Country ;
     sp:region "Belgium"^^xsd:string .
 
-countries:country50 a sp:Country ;
+sp:country50 a sp:Country ;
     sp:region "Sweden"^^xsd:string .
 
-countries:country51 a sp:Country ;
+sp:country51 a sp:Country ;
     sp:region "Taiwan"^^xsd:string .
 
-countries:country52 a sp:Country ;
+sp:country52 a sp:Country ;
     sp:region "Switzerland"^^xsd:string .
 
-countries:country53 a sp:Country ;
+sp:country53 a sp:Country ;
     sp:region "Turkey"^^xsd:string .
 
-countries:country54 a sp:Country ;
+sp:country54 a sp:Country ;
     sp:region "United Kingdom"^^xsd:string .
 
-countries:country55 a sp:Country ;
+sp:country55 a sp:Country ;
     sp:region "United States"^^xsd:string .
 
-countries:country56 a sp:Country ;
+sp:country56 a sp:Country ;
     sp:region "Uruguay"^^xsd:string .
 
-countries:country57 a sp:Country ;
+sp:country57 a sp:Country ;
     sp:region "Thailand"^^xsd:string .
 
-countries:country58 a sp:Country ;
+sp:country58 a sp:Country ;
     sp:region "Andorra"^^xsd:string .
 
-countries:country59 a sp:Country ;
+sp:country59 a sp:Country ;
     sp:region "Romania"^^xsd:string .
 
-countries:country6 a sp:Country ;
+sp:country6 a sp:Country ;
     sp:region "Colombia"^^xsd:string .
 
-countries:country60 a sp:Country ;
+sp:country60 a sp:Country ;
     sp:region "Vietnam"^^xsd:string .
 
-countries:country61 a sp:Country ;
+sp:country61 a sp:Country ;
     sp:region "Egypt"^^xsd:string .
 
-countries:country62 a sp:Country ;
+sp:country62 a sp:Country ;
     sp:region "India"^^xsd:string .
 
-countries:country63 a sp:Country ;
+sp:country63 a sp:Country ;
     sp:region "Israel"^^xsd:string .
 
-countries:country64 a sp:Country ;
+sp:country64 a sp:Country ;
     sp:region "Morocco"^^xsd:string .
 
-countries:country7 a sp:Country ;
+sp:country7 a sp:Country ;
     sp:region "Bolivia"^^xsd:string .
 
-countries:country8 a sp:Country ;
+sp:country8 a sp:Country ;
     sp:region "Denmark"^^xsd:string .
 
-countries:country9 a sp:Country ;
+sp:country9 a sp:Country ;
     sp:region "Bulgaria"^^xsd:string .
 
