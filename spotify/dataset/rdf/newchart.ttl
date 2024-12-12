@@ -1,0 +1,643 @@
+@prefix spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+spotify:chart1 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country1 .
+
+spotify:chart10 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country5 .
+
+spotify:chart100 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country50 .
+
+spotify:chart101 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country51 .
+
+spotify:chart102 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country51 .
+
+spotify:chart103 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country52 .
+
+spotify:chart104 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country52 .
+
+spotify:chart105 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country53 .
+
+spotify:chart106 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country53 .
+
+spotify:chart107 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country54 .
+
+spotify:chart108 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country54 .
+
+spotify:chart109 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country55 .
+
+spotify:chart11 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country6 .
+
+spotify:chart110 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country55 .
+
+spotify:chart111 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country56 .
+
+spotify:chart112 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country56 .
+
+spotify:chart113 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country57 .
+
+spotify:chart114 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country57 .
+
+spotify:chart115 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country58 .
+
+spotify:chart116 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country58 .
+
+spotify:chart117 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country59 .
+
+spotify:chart118 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country59 .
+
+spotify:chart119 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country60 .
+
+spotify:chart12 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country6 .
+
+spotify:chart120 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country60 .
+
+spotify:chart121 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country61 .
+
+spotify:chart122 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country61 .
+
+spotify:chart123 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country62 .
+
+spotify:chart124 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country62 .
+
+spotify:chart125 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country63 .
+
+spotify:chart126 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country63 .
+
+spotify:chart127 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country64 .
+
+spotify:chart128 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country64 .
+
+spotify:chart13 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country7 .
+
+spotify:chart14 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country7 .
+
+spotify:chart15 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country8 .
+
+spotify:chart16 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country8 .
+
+spotify:chart17 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country9 .
+
+spotify:chart18 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country9 .
+
+spotify:chart19 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country10 .
+
+spotify:chart2 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country1 .
+
+spotify:chart20 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country10 .
+
+spotify:chart21 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country11 .
+
+spotify:chart22 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country11 .
+
+spotify:chart23 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country12 .
+
+spotify:chart24 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country12 .
+
+spotify:chart25 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country13 .
+
+spotify:chart26 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country13 .
+
+spotify:chart27 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country14 .
+
+spotify:chart28 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country14 .
+
+spotify:chart29 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country15 .
+
+spotify:chart3 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country2 .
+
+spotify:chart30 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country15 .
+
+spotify:chart31 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country16 .
+
+spotify:chart32 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country16 .
+
+spotify:chart33 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country17 .
+
+spotify:chart34 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country17 .
+
+spotify:chart35 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country18 .
+
+spotify:chart36 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country18 .
+
+spotify:chart37 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country19 .
+
+spotify:chart38 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country19 .
+
+spotify:chart39 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country20 .
+
+spotify:chart4 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country2 .
+
+spotify:chart40 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country20 .
+
+spotify:chart41 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country21 .
+
+spotify:chart42 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country21 .
+
+spotify:chart43 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country22 .
+
+spotify:chart44 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country22 .
+
+spotify:chart45 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country23 .
+
+spotify:chart46 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country23 .
+
+spotify:chart47 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country24 .
+
+spotify:chart48 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country24 .
+
+spotify:chart49 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country25 .
+
+spotify:chart5 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country3 .
+
+spotify:chart50 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country25 .
+
+spotify:chart51 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country26 .
+
+spotify:chart52 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country26 .
+
+spotify:chart53 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country27 .
+
+spotify:chart54 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country27 .
+
+spotify:chart55 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country28 .
+
+spotify:chart56 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country28 .
+
+spotify:chart57 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country29 .
+
+spotify:chart58 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country29 .
+
+spotify:chart59 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country30 .
+
+spotify:chart6 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country3 .
+
+spotify:chart60 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country30 .
+
+spotify:chart61 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country31 .
+
+spotify:chart62 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country31 .
+
+spotify:chart63 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country32 .
+
+spotify:chart64 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country32 .
+
+spotify:chart65 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country33 .
+
+spotify:chart66 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country33 .
+
+spotify:chart67 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country34 .
+
+spotify:chart68 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country34 .
+
+spotify:chart69 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country35 .
+
+spotify:chart7 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country4 .
+
+spotify:chart70 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country35 .
+
+spotify:chart71 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country36 .
+
+spotify:chart72 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country36 .
+
+spotify:chart73 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country37 .
+
+spotify:chart74 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country37 .
+
+spotify:chart75 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country38 .
+
+spotify:chart76 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country38 .
+
+spotify:chart77 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country39 .
+
+spotify:chart78 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country39 .
+
+spotify:chart79 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country40 .
+
+spotify:chart8 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country4 .
+
+spotify:chart80 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country40 .
+
+spotify:chart81 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country41 .
+
+spotify:chart82 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country41 .
+
+spotify:chart83 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country42 .
+
+spotify:chart84 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country42 .
+
+spotify:chart85 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country43 .
+
+spotify:chart86 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country43 .
+
+spotify:chart87 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country44 .
+
+spotify:chart88 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country44 .
+
+spotify:chart89 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country45 .
+
+spotify:chart9 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country5 .
+
+spotify:chart90 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country45 .
+
+spotify:chart91 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country46 .
+
+spotify:chart92 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country46 .
+
+spotify:chart93 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country47 .
+
+spotify:chart94 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country47 .
+
+spotify:chart95 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country48 .
+
+spotify:chart96 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country48 .
+
+spotify:chart97 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country49 .
+
+spotify:chart98 a spotify:Chart,
+        spotify:Viral50 ;
+    spotify:chartType "viral50"^^xsd:string ;
+    spotify:publishedIn spotify:country49 .
+
+spotify:chart99 a spotify:Chart,
+        spotify:Top200 ;
+    spotify:chartType "top200"^^xsd:string ;
+    spotify:publishedIn spotify:country50 .
+
