@@ -28,7 +28,16 @@ const readSongsData = () => {
         return [];
     }
 };
+// فیلتر کردن نتایج با fuzzy matching (حساس به اشتباهات املایی)
+const fuzzySearch = (keyword, songsData) => {
+    const fuse = new Fuse(songsData, {
+        keys: ["name"], // جستجو فقط در نام آهنگ‌ها
+        includeScore: true, // برای نمایش دقت تطبیق
+    });
 
+    const results = fuse.search(keyword);
+    return results.map((result) => result.item); // برمی‌گرداند آهنگ‌هایی که بیشترین تطبیق را دارند
+};
 
 
 // Endpoint برای تحلیل سوال و جستجو
