@@ -12,11 +12,12 @@ app.use(express.json());
 const songsJsonPath =
     "songs_with_artists.json";
 
+// I was not allowed to share the api key here and push it on Github
 // پیکربندی OpenAI
-// const openai = new OpenAI({
-//   apiKey:
-//     "",
-// });
+const openai = new OpenAI({
+    apiKey:
+        "",
+});
 
 // خواندن داده‌ها از فایل songs_with_artists.json
 const readSongsData = () => {
