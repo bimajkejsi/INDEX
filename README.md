@@ -1,3 +1,5 @@
+<img src="./spotify/src/logo.jpg" width="250px">
+
 # Index
 
 ## Project Description
