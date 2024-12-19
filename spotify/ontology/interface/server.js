@@ -109,3 +109,12 @@ const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on http://127.0.0.1:${PORT}`);
 });
+const path = require("path");
+
+// Serve static files (index.html and others)
+// app.use(express.static(path.join(__dirname, "public")));
+
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "index.html"));
+});

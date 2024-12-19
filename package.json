@@ -4,6 +4,6 @@
     "express": "^4.21.2",
     "fuse.js": "^7.0.0",
     "openai": "^4.76.3",
-    "sweetalert2": "^11.15.0"
+    "sweetalert2": "^11.15.2"
   }
 }
