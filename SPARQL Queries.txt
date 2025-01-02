@@ -1,0 +1,32 @@
+
+Query 1: Number of Songs Released per Year
+
+PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?year (COUNT(?song) AS ?numberOfSongs)
+WHERE {
+    ?rankRecord a spotify:RankedRecord ;
+                spotify:assignedToSong ?song ;
+                spotify:date ?releaseDate .
+    BIND (SUBSTR(STR(?releaseDate), 1, 4) AS ?year)
+}
+GROUP BY ?year
+ORDER BY ASC(?year)
+
+Query 2: Total Streams per Year
+
+PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?year (SUM(?streamCount) AS ?totalStreams)
+WHERE {
+    ?rankRecord a spotify:RankedRecord ;
+                spotify:streamCount ?streamCount ;
+                spotify:date ?releaseDate .
+
+    BIND (SUBSTR(STR(?releaseDate), 1, 4) AS ?year)
+}
+GROUP BY ?year
+ORDER BY ASC(?year)
+
