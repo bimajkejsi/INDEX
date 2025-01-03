@@ -206,3 +206,42 @@ WHERE {
 GROUP BY ?songName
 ORDER BY DESC(?timesAtTop1)
 LIMIT 5
+
+Query 10: Top Taylor Swift Song by Total Streams in Each Country
+
+PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX so: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
+
+SELECT ?songName (SUM(?streams) AS ?totalStreams)
+WHERE {
+  ?rank a spotify:RankedRecord ;
+        spotify:assignedToSong ?song ;
+        spotify:streamCount ?streams .
+
+  ?song spotify:performedBy ?artist ;
+        spotify:songName ?songName .
+
+  ?artist foaf:name "Taylor Swift" .
+}
+GROUP BY ?songName
+ORDER BY DESC(?totalStreams)
+LIMIT 10
+
+Query 11: Top 10 Countries by Total Streams
+
+PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?region (SUM(?streamCount) AS ?totalStreams)
+WHERE {
+  ?rank a spotify:RankedRecord ;
+          spotify:associatedWithChart ?chart ;
+          spotify:streamCount ?streamCount . 
+  ?chart spotify:publishedIn ?country .
+  ?country spotify:region ?region .
+}
+GROUP BY ?region
+ORDER BY DESC(?totalStreams)
+LIMIT 10
+
