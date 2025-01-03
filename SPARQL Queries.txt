@@ -187,3 +187,22 @@ WHERE {
 }
 GROUP BY ?countryName
 ORDER BY DESC(?numberOfSongs)
+
+Query 9: Top 5 artists with the most nominated songs in the Top 200
+PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?songName (COUNT(?rankRecord) AS ?timesAtTop1)
+WHERE {
+    ?rankRecord a spotify:RankedRecord ;
+                spotify:assignedToSong ?song ;
+                spotify:hasRank 1 ;
+                spotify:associatedWithChart ?chart.
+    ?chart a spotify:Top200 .
+
+    ?song a spotify:Song ;
+          spotify:songName ?songName .
+}
+GROUP BY ?songName
+ORDER BY DESC(?timesAtTop1)
+LIMIT 5
