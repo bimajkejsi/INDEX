@@ -207,7 +207,7 @@ GROUP BY ?songName
 ORDER BY DESC(?timesAtTop1)
 LIMIT 5
 
-Query 10: Top Taylor Swift Song by Total Streams in Each Country
+Query 10: Top Taylor Swift Song by Total Streams 
 
 PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
