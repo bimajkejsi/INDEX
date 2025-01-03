@@ -30,3 +30,33 @@ WHERE {
 GROUP BY ?year
 ORDER BY ASC(?year)
 
+Query 3: Top 10 songs that have most often been top 1 on the Top 200 chart
+
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?title ?artistName (COUNT(?song) AS ?totalTop1)
+WHERE {
+    ?rankRecord a spotify:RankedRecord ;
+                spotify:hasRank ?rank.
+
+    ?rankRecord spotify:associatedWithChart ?chart.
+    ?rankRecord spotify:assignedToSong ?song.
+    
+    ?chart a spotify:Top200.
+    
+    ?song spotify:songName ?title;
+    	  spotify:performedBy ?artist.
+    
+    ?artist foaf:name ?artistName.
+    
+    FILTER (?rank=1)
+    
+    
+}
+GROUP BY ?title ?artistName
+ORDER BY DESC(?totalTop1)
+LIMIT 10
+
+
