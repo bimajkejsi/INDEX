@@ -22,6 +22,8 @@ The repository is organized as follows:
 ### 1. `index`
 This folder contains the source code of the developed project.
 
+
+**`SPARQL_Queries.txt`**
 - **`dataset`**:
   - **`rdf`**: Contains RDF files for semantic web integration.
   - **`ttl files.zip`**: Contains the converted data into RDF files.
