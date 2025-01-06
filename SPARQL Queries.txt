@@ -279,3 +279,39 @@ WHERE {
 }
 ORDER BY ASC(?highestRank) DESC(?streamCount)
 LIMIT 10
+
+Query13:Find the Top 5 Artists with the Most Songs Ranked in the Top 200 Across All Countries
+PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?artistName (COUNT(DISTINCT ?song) AS ?totalSongs) 
+       (SUM(?streamCount) AS ?totalStreams) 
+       ?mostStreamedSong ?maxStreamCount
+WHERE {
+
+  {
+    SELECT ?artist (MAX(?streamCount) AS ?maxStreamCount) ?mostStreamedSong
+    WHERE {
+      ?rankRecord a spotify:RankedRecord ;
+                  spotify:assignedToSong ?song ;
+                  spotify:hasRank ?rank ;
+                  spotify:associatedWithChart ?chart ;
+                  spotify:streamCount ?streamCount .
+      ?chart a spotify:Top200 .
+      ?song spotify:performedBy ?artist ;
+            spotify:songName ?mostStreamedSong .
+    }
+    GROUP BY ?artist ?mostStreamedSong
+  }
+
+  ?rankRecord a spotify:RankedRecord ;
+              spotify:assignedToSong ?song ;
+              spotify:associatedWithChart ?chart ;
+              spotify:streamCount ?streamCount .
+  ?chart a spotify:Top200 .
+  ?song spotify:performedBy ?artist .
+  ?artist foaf:name ?artistName .
+}
+GROUP BY ?artistName ?mostStreamedSong ?maxStreamCount
+ORDER BY DESC(?totalSongs) DESC(?totalStreams)
+LIMIT 5
