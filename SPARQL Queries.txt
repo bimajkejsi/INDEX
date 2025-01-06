@@ -245,3 +245,37 @@ GROUP BY ?region
 ORDER BY DESC(?totalStreams)
 LIMIT 10
 
+Query 12:Top Artists with Songs in the Top200 and Their Highest-Ranked Songs Over Time
+PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix foaf: <http://xmlns.com/foaf/0.1/> 
+SELECT ?artistName ?songName ?highestRank ?chartType ?streamCount
+WHERE {
+  {
+    SELECT ?artist ?topSong (MIN(?rank) AS ?highestRank) ?chartType
+    WHERE {
+      ?rankInstance a spotify:RankedRecord ;
+                    spotify:assignedToSong ?topSong ;
+                    spotify:hasRank ?rank ;
+                    spotify:date ?date ;
+                    spotify:associatedWithChart ?chart .
+      ?chart a spotify:Top200 ;
+             spotify:chartType ?chartType .
+      ?topSong a spotify:Song ;
+               spotify:performedBy ?artist .
+    }
+    GROUP BY ?artist ?topSong ?chartType
+  }
+  ?rankInstance a spotify:RankedRecord ;
+                spotify:assignedToSong ?topSong ;
+                spotify:streamCount ?streamCount .
+  ?topSong a spotify:Song ;
+           spotify:performedBy ?artist ;
+           spotify:songName ?songName . # Fetch the song name here
+  ?artist foaf:name ?artistName .
+  
+  FILTER (?highestRank <= 10) 
+}
+ORDER BY ASC(?highestRank) DESC(?streamCount)
+LIMIT 10
