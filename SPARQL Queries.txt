@@ -280,7 +280,7 @@ WHERE {
 ORDER BY ASC(?highestRank) DESC(?streamCount)
 LIMIT 10
 
-Query13:Find the Top 5 Artists with the Most Songs Ranked in the Top 200 Across All Countries
+Query13:Find the Top 5 Artists with the Most Songs Ranked in the Top 200 Across All Countries -> it takes time to run
 PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
@@ -315,3 +315,48 @@ WHERE {
 GROUP BY ?artistName ?mostStreamedSong ?maxStreamCount
 ORDER BY DESC(?totalSongs) DESC(?totalStreams)
 LIMIT 5
+
+Query14: Find Artists With Songs Containing Certain Keywords Ranked in the Top 50 of Top200, Excluding Specific Artists
+PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+SELECT ?artistName ?songName ?totalStreams ?rank
+WHERE {
+
+  ?rankInstance a spotify:RankedRecord ;
+                spotify:assignedToSong ?song ;
+                spotify:hasRank ?rank ;
+                spotify:streamCount ?streamCount ;
+                spotify:associatedWithChart ?chart .
+  
+
+  ?chart a spotify:Top200 .
+
+
+  ?song a spotify:Song ;
+        spotify:performedBy ?artist ;
+        spotify:songName ?songName .
+
+ 
+  ?artist a spotify:Artist ;
+          foaf:name ?artistName .
+
+
+  FILTER (?rank <= 50)
+
+
+  FILTER (regex(?songName, "love|dance|party", "i")) 
+
+
+  FILTER (!regex(?artistName, "Ed Sheeran|Drake|Taylor Swift", "i")) 
+
+
+  FILTER (?streamCount > 1000000)
+
+  
+  FILTER (!regex(?songName, "[0-9]", ""))
+}
+ORDER BY ASC(?rank) DESC(?totalStreams)
+LIMIT 15
