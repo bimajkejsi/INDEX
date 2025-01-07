@@ -303,45 +303,24 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
-SELECT ?artistName ?songName ?totalStreams ?rank
+SELECT ?artistName (COUNT(DISTINCT ?song) AS ?totalSongs) (SUM(?streamCount) AS ?totalStreams)
 WHERE {
-
   ?rankInstance a spotify:RankedRecord ;
                 spotify:assignedToSong ?song ;
                 spotify:hasRank ?rank ;
-                spotify:streamCount ?streamCount ;
-                spotify:associatedWithChart ?chart .
-  
-
+                spotify:associatedWithChart ?chart ;
+                spotify:streamCount ?streamCount .
   ?chart a spotify:Top200 .
-
-
   ?song a spotify:Song ;
-        spotify:performedBy ?artist ;
-        spotify:songName ?songName .
-
- 
+        spotify:performedBy ?artist .
   ?artist a spotify:Artist ;
           foaf:name ?artistName .
-
-
   FILTER (?rank <= 50)
-
-
-  FILTER (regex(?songName, "love|dance|party", "i")) 
-
-
-  FILTER (!regex(?artistName, "Ed Sheeran|Drake|Taylor Swift", "i")) 
-
-
-  FILTER (?streamCount > 1000000)
-
-  
-  FILTER (!regex(?songName, "[0-9]", ""))
+  FILTER (!regex(?artistName, "Ed Sheeran|Drake|Taylor Swift", "i"))
 }
-ORDER BY ASC(?rank) DESC(?totalStreams)
-LIMIT 15
-
+GROUP BY ?artistName
+ORDER BY DESC(?totalSongs) DESC(?totalStreams)
+LIMIT 10
 
 Query 14: It retrieves the most streamed song and its artist for each country in 2020 by filtering records by year and selecting the maximum stream count per country.
 
