@@ -360,3 +360,46 @@ WHERE {
 }
 ORDER BY ASC(?rank) DESC(?totalStreams)
 LIMIT 15
+
+
+Query 15: It retrieves the most streamed song and its artist for each country in 2020 by filtering records by year and selecting the maximum stream count per country.
+
+PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?countryRegion ?songName ?artistName ?maxStreamCount
+WHERE {
+  {
+    SELECT ?countryRegion (MAX(?streamCount) AS ?maxStreamCount)
+    WHERE {
+      ?rankedRecord a spotify:RankedRecord ;
+                    spotify:streamCount ?streamCount ;
+                    spotify:associatedWithChart ?chart ;
+                    spotify:date ?date .
+      ?chart spotify:publishedIn ?country .
+      ?country a spotify:Country ;
+               spotify:region ?countryRegion .
+      
+      FILTER (STRSTARTS(STR(?date), "2020"))
+    }
+    GROUP BY ?countryRegion
+  }
+  
+  ?rankedRecord a spotify:RankedRecord ;
+                spotify:streamCount ?streamCount ;
+                spotify:assignedToSong ?song ;
+                spotify:associatedWithChart ?chart ;
+                spotify:date ?date .
+  ?chart spotify:publishedIn ?country .
+  ?country a spotify:Country ;
+           spotify:region ?countryRegion .
+  ?song a spotify:Song ;
+        spotify:songName ?songName ;
+        spotify:performedBy ?artist .
+  ?artist foaf:name ?artistName .
+  
+  FILTER (STRSTARTS(STR(?date), "2020"))
+  FILTER (?streamCount = ?maxStreamCount)
+}
+ORDER BY ?countryRegion
