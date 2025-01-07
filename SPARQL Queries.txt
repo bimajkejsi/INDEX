@@ -226,7 +226,7 @@ GROUP BY ?region
 ORDER BY DESC(?totalStreams)
 LIMIT 10
 
-Query 11:Top Artists with Songs in the Top200 and Their Highest-Ranked Songs Over Time
+Query 11:Top Artists with Songs in the Top200 and Their highest ranked Songs Over Time
 PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -263,7 +263,7 @@ ORDER BY ASC(?highestRank) DESC(?streamCount)
 LIMIT 10
 
 
-Query 12: Find Artists With Songs Containing Certain Keywords Ranked in the Top 50 of Top200, Excluding Specific Artists
+Query 12: Find Top Artists With Songs in the Top 50 of Top200, Excluding Specific Artists
 PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
