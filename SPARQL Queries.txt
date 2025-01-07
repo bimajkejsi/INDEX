@@ -188,26 +188,7 @@ WHERE {
 GROUP BY ?countryName
 ORDER BY DESC(?numberOfSongs)
 
-Query 9: Top 5 artists with the most nominated songs in the Top 200
-PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-SELECT ?songName (COUNT(?rankRecord) AS ?timesAtTop1)
-WHERE {
-    ?rankRecord a spotify:RankedRecord ;
-                spotify:assignedToSong ?song ;
-                spotify:hasRank 1 ;
-                spotify:associatedWithChart ?chart.
-    ?chart a spotify:Top200 .
-
-    ?song a spotify:Song ;
-          spotify:songName ?songName .
-}
-GROUP BY ?songName
-ORDER BY DESC(?timesAtTop1)
-LIMIT 5
-
-Query 10: Top Taylor Swift Song by Total Streams 
+Query 9: Top Taylor Swift Song by Total Streams 
 
 PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
@@ -228,7 +209,7 @@ GROUP BY ?songName
 ORDER BY DESC(?totalStreams)
 LIMIT 10
 
-Query 11: Top 10 Countries by Total Streams
+Query 10: Top 10 Countries by Total Streams
 
 PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -245,7 +226,7 @@ GROUP BY ?region
 ORDER BY DESC(?totalStreams)
 LIMIT 10
 
-Query 12:Top Artists with Songs in the Top200 and Their Highest-Ranked Songs Over Time
+Query 11:Top Artists with Songs in the Top200 and Their Highest-Ranked Songs Over Time
 PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -280,7 +261,7 @@ WHERE {
 ORDER BY ASC(?highestRank) DESC(?streamCount)
 LIMIT 10
 
-Query13:Find the Top 5 Artists with the Most Songs Ranked in the Top 200 Across All Countries -> it takes time to run
+Query 12:Find the Top 5 Artists with the Most Songs Ranked in the Top 200 Across All Countries -> it takes time to run
 PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
@@ -316,7 +297,7 @@ GROUP BY ?artistName ?mostStreamedSong ?maxStreamCount
 ORDER BY DESC(?totalSongs) DESC(?totalStreams)
 LIMIT 5
 
-Query14: Find Artists With Songs Containing Certain Keywords Ranked in the Top 50 of Top200, Excluding Specific Artists
+Query 13: Find Artists With Songs Containing Certain Keywords Ranked in the Top 50 of Top200, Excluding Specific Artists
 PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -362,7 +343,7 @@ ORDER BY ASC(?rank) DESC(?totalStreams)
 LIMIT 15
 
 
-Query 15: It retrieves the most streamed song and its artist for each country in 2020 by filtering records by year and selecting the maximum stream count per country.
+Query 14: It retrieves the most streamed song and its artist for each country in 2020 by filtering records by year and selecting the maximum stream count per country.
 
 PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
