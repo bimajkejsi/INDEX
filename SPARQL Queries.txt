@@ -226,41 +226,32 @@ GROUP BY ?region
 ORDER BY DESC(?totalStreams)
 LIMIT 10
 
-Query 11:Top Artists with Songs in the Top200 and Their highest ranked Songs Over Time
+Query 11:Top The top artist's highest ranked song in the Top200 chart for 2017
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-prefix foaf: <http://xmlns.com/foaf/0.1/> 
 
 SELECT ?artistName ?songName ?highestRank ?chartType ?streamCount
 WHERE {
-  {
-    SELECT ?artist ?topSong (MIN(?rank) AS ?highestRank) ?chartType
-    WHERE {
-      ?rankInstance a spotify:RankedRecord ;
-                    spotify:assignedToSong ?topSong ;
-                    spotify:hasRank ?rank ;
-                    spotify:date ?date ;
-                    spotify:associatedWithChart ?chart .
-      ?chart a spotify:Top200 ;
-             spotify:chartType ?chartType .
-      ?topSong a spotify:Song ;
-               spotify:performedBy ?artist .
-    }
-    GROUP BY ?artist ?topSong ?chartType
-  }
+
   ?rankInstance a spotify:RankedRecord ;
-                spotify:assignedToSong ?topSong ;
+                spotify:assignedToSong ?song ;
+                spotify:hasRank ?rank ;
+                spotify:date ?date ;
+                spotify:associatedWithChart ?chart ;
                 spotify:streamCount ?streamCount .
-  ?topSong a spotify:Song ;
-           spotify:performedBy ?artist ;
-           spotify:songName ?songName . # Fetch the song name here
+  ?chart a spotify:Top200 ;
+         spotify:chartType ?chartType .
+  ?song a spotify:Song ;
+        spotify:performedBy ?artist ;
+        spotify:songName ?songName .
   ?artist foaf:name ?artistName .
-  
-  FILTER (?highestRank <= 10) 
+  FILTER (?rank <= 10)
+  FILTER (?date >= "2017-01-01"^^xsd:date && ?date <= "2017-12-31"^^xsd:date)
 }
-ORDER BY ASC(?highestRank) DESC(?streamCount)
-LIMIT 10
+ORDER BY ASC(?rank) DESC(?streamCount)
+LIMIT 1
+
 
 
 Query 12: Find Top Artists With Songs in the Top 50 of Top200, Excluding Specific Artists
