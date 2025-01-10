@@ -227,11 +227,10 @@ ORDER BY DESC(?totalStreams)
 LIMIT 10
 
 Query 11:Top The top artist's highest ranked song in the Top200 chart for 2017
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX spotify: <http://www.dei.unipd.it/GraphDatabases/SpotifyOntology#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-SELECT ?artistName ?songName ?highestRank ?chartType ?streamCount
+SELECT ?artistName ?songName (MAX(?rank) as ?highestRank) ?chartType ?streamCount
 WHERE {
 
   ?rankInstance a spotify:RankedRecord ;
@@ -249,6 +248,7 @@ WHERE {
   FILTER (?rank <= 10)
   FILTER (?date >= "2017-01-01"^^xsd:date && ?date <= "2017-12-31"^^xsd:date)
 }
+GROUP BY ?artistName ?songName ?chartType ?streamCount
 ORDER BY ASC(?rank) DESC(?streamCount)
 LIMIT 1
 
