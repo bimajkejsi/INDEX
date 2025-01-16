@@ -1,0 +1,151 @@
+/* استایل کلی مودال */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* پس‌زمینه نیمه‌شفاف */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  overflow: hidden;
+}
+
+.modal-dialog {
+  width: 90%; /* عرض مودال */
+  max-width: 1000px;
+  max-height: 90%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  background-color: #007bff; /* رنگ آبی برای هدر */
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .btn-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.modal-header .btn-close:hover {
+  color: #ccc;
+}
+
+.modal-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f9f9f9; /* پس‌زمینه روشن‌تر */
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+.modal-footer {
+  background-color: #f1f1f1;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-footer button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+/* استایل لیست هنرمندان */
+.list-group {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  background-color: white;
+  font-size: 0.95rem;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item:hover {
+  background-color: #f1f1f1; /* رنگ هاور */
+}
+
+.list-group-item strong {
+  color: #333;
+}
+
+.list-group-item .artist-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-group-item .artist-info span {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.list-group-item .btn {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  text-transform: uppercase;
+  border-radius: 6px;
+}
+
+/* دکمه اسپاتیفای */
+.list-group-item .btn-primary {
+  background-color: #1db954; /* رنگ اسپاتیفای */
+  border-color: #1db954;
+  color: #ffffff;
+}
+
+.list-group-item .btn-primary:hover {
+  background-color: #17a74a;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .modal-dialog {
+    width: 95%;
+    max-height: 95%;
+  }
+
+  .list-group-item {
+    font-size: 0.85rem;
+  }
+
+  .modal-header {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,166 @@
+/* Modal container */
+.modal {
+  display: flex; /* Changed from 'none' for visibility during testing */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Modal content */
+.modal-content {
+  background: linear-gradient(145deg, #f9f9f9, #eaeaea);
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 85%;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  border: 1px solid #ddd;
+  animation: zoomIn 0.4s ease-in-out;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff4d4d;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal header */
+.modal-header {
+  text-align: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 15px;
+}
+
+.modal-header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+  font-weight: bold;
+}
+
+.modal-header p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Modal body */
+.modal-body {
+  line-height: 1.8;
+  color: #444;
+}
+
+.modal-body p {
+  font-size: 1rem;
+  margin: 12px 0;
+}
+
+/* Extra section */
+.modal-extra {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 25px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-extra h3 {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.modal-extra p {
+  font-size: 0.95rem;
+  margin: 6px 0;
+  color: #666;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .modal-body p {
+    font-size: 0.95rem;
+  }
+
+  .modal-extra h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 15px;
+  }
+
+  .close-btn {
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+    width: 30px;
+    height: 30px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal-body p {
+    font-size: 0.85rem;
+  }
+
+  .modal-extra {
+    padding: 15px;
+  }
+}

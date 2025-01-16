@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "@nlpjs/nlp": "^4.27.0",
+    "@rdfjs/parser-n3": "^2.0.2",
+    "@tensorflow/tfjs": "^4.22.0",
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "fuse.js": "^7.0.0",
+    "jquery": "^3.7.1",
+    "jsdom": "^25.0.1",
+    "n3": "^1.23.1",
+    "openai": "^4.77.0",
+    "rdf-parse": "^4.0.0",
+    "streamify-string": "^1.0.1",
+    "sweetalert2": "^11.6.13",
+    "synaptic": "^1.1.4"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "index-main",
+  "description": "Graph Database",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

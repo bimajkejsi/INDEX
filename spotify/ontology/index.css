@@ -1,0 +1,305 @@
+/* استایل کلی برای صفحه */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background: linear-gradient(120deg, #eef2f3, #d9e7f3);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+/* کانتینر اصلی */
+.container {
+  max-width: 1000px;
+  width: 90%;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* انیمیشن محو شونده */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* عنوان اصلی */
+.title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #4a90e2;
+  margin-bottom: 30px;
+}
+
+/* ورودی جستجو */
+.form-control {
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 25px;
+  border: 2px solid #dce6f0;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 4px 10px rgba(74, 144, 226, 0.2);
+  outline: none;
+}
+
+/* دکمه جستجو */
+.btn {
+  width: 100%;
+  padding: 15px;
+  background: #4a90e2;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #3b7cd4;
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* بخش پاسخ‌ها */
+.response {
+  margin-top: 25px;
+  text-align: left;
+}
+
+/* کارت‌های آهنگ */
+.song-card {
+  background: linear-gradient(145deg, #ffffff, #f8f8f8);
+  border: none;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.song-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* عنوان آهنگ */
+.song-card h3 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* اطلاعات آهنگ */
+.song-card p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* لینک گوش دادن */
+.listen-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #4a90e2;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.listen-link:hover {
+  background-color: #3b7cd4;
+  transform: scale(1.05);
+}
+
+/* سوئیچر زبان */
+.language-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.language-switcher .btn {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.language-switcher .btn.active {
+  background-color: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+}
+
+/* مدیا کوئری برای نمایش ریسپانسیو */
+@media (max-width: 768px) {
+  .container {
+    padding: 25px;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .form-control {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+
+  .song-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .song-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .form-control {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .song-card {
+    padding: 20px;
+  }
+
+  .song-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .song-card p {
+    font-size: 0.85rem;
+  }
+}
+/* استایل عمومی دکمه‌ها */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* استایل دکمه جستجو */
+.btn-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3, #003f7f);
+  box-shadow: 0 6px 12px rgba(0, 91, 187, 0.3);
+  transform: translateY(-3px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 91, 187, 0.2);
+}
+
+/* استایل دکمه تاریخچه */
+.btn-secondary {
+  background: linear-gradient(135deg, #6c757d, #495057);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #495057, #343a40);
+  box-shadow: 0 6px 12px rgba(73, 80, 87, 0.3);
+  transform: translateY(-3px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(73, 80, 87, 0.2);
+}
+
+/* فاصله بین آیکون و متن */
+.btn-icon i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* انیمیشن ساده برای دکمه‌ها */
+@keyframes buttonGlow {
+  0% {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.btn-primary:hover {
+  animation: buttonGlow 1s infinite;
+}
+
+.btn-secondary:hover {
+  animation: buttonGlow 1s infinite;
+}
+
+/* واکنش‌گرایی */
+@media (max-width: 576px) {
+  .btn-icon {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+  .btn-icon i {
+    margin-right: 6px;
+    font-size: 1rem;
+  }
+}
